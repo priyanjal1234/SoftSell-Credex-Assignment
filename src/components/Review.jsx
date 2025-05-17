@@ -25,41 +25,41 @@ const Review = () => {
     },
   ];
   return (
-    <section id="review" className="w-full h-[80%] bg-[#245FE4] pt-20">
-      <h1 className="text-4xl font-bold text-white text-center">
+    <section id="review" className="w-full min-h-screen bg-[#245FE4] pt-16 pb-10 flex flex-col">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center px-4">
         What Our Customers Say
       </h1>
-      <h2 className="text-lg text-white mt-6 text-center">
+      <h2 className="text-base sm:text-lg text-white mt-4 sm:mt-6 text-center px-4">
         Don't just take our word for it. Here's what businesses like yours have
         experienced.
       </h2>
 
-      <div className="grid grid-cols-1 text-white mt-16 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-6xl w-full mx-auto mt-10 sm:mt-16 px-4">
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className={`bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-white/20 transition-all duration-700 transform translate-y-0 opacity-100 ${testimonial.delay}`}
+            className={`bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-white/20 transition-all duration-700 transform translate-y-0 opacity-100 ${testimonial.delay} flex flex-col h-full`}
           >
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-3 sm:mb-4">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="h-5 w-5 text-yellow-400 fill-yellow-400"
+                  className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400 fill-yellow-400"
                 />
               ))}
             </div>
-            <blockquote className="text-lg mb-6">
+            <blockquote className="text-base sm:text-lg mb-4 sm:mb-6 flex-1">
               "{testimonial.quote}"
             </blockquote>
-            <div className="flex items-center">
+            <div className="flex items-center mt-4">
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-12 h-12 rounded-full object-cover mr-4"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover mr-3 sm:mr-4"
               />
               <div>
-                <h4 className="font-semibold">{testimonial.name}</h4>
-                <p className="text-blue-200 text-sm">
+                <h4 className="font-semibold text-sm sm:text-base">{testimonial.name}</h4>
+                <p className="text-blue-200 text-xs sm:text-sm">
                   {testimonial.role}, {testimonial.company}
                 </p>
               </div>

@@ -1,5 +1,6 @@
 import { Clock, DollarSign, Heart, ShieldCheck } from "lucide-react";
 import React from "react";
+import AdvantageCard from "./AdvantageCard";
 
 const Advantages = () => {
   const benefits = [
@@ -33,27 +34,21 @@ const Advantages = () => {
     },
   ];
   return (
-    <section id="advantage" className="w-full h-[70%] bg-[#F9FAFB]">
-      <h1 className="text-4xl font-bold text-center">Why Choose Us</h1>
-      <h2 className="text-gray-600 text-lg text-center mt-4">
+    <section
+      id="advantage"
+      className="w-full py-12 px-4 bg-[#F9FAFB] md:py-16 lg:py-20"
+    >
+      <h1 className="text-3xl sm:text-4xl font-bold text-center">
+        Why Choose Us
+      </h1>
+      <h2 className="text-gray-600 text-base sm:text-lg text-center mt-4">
         SoftSell offers a secure, transparent, and efficient process for selling
-        your unused <br /> software licenses.
+        your unused <br className="hidden sm:block" /> software licenses.
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 mt-16 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto mt-12 md:mt-16">
         {benefits.map((benefit, index) => (
-          <div
-            key={index}
-            className={`bg-white p-6 rounded-xl shadow-sm border border-gray-100 transition-all duration-700 transform translate-y-0 opacity-100 ${benefit.delay}`}
-          >
-            <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mb-5">
-              {benefit.icon}
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              {benefit.title}
-            </h3>
-            <p className="text-gray-600">{benefit.description}</p>
-          </div>
+          <AdvantageCard benefit={benefit} index={index} />
         ))}
       </div>
     </section>
