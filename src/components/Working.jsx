@@ -46,7 +46,7 @@ const Working = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <WorkingCard step={step} index={index}/>
+            <WorkingCard key={index} step={step} index={index}/>
           ))}
         </div>
       </div>

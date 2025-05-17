@@ -48,7 +48,7 @@ const Advantages = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto mt-12 md:mt-16">
         {benefits.map((benefit, index) => (
-          <AdvantageCard benefit={benefit} index={index} />
+          <AdvantageCard key={index} benefit={benefit} index={index} />
         ))}
       </div>
     </section>
