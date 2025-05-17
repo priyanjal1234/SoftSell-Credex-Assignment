@@ -38,9 +38,9 @@ const Review = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className={`bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-white/20 transition-all duration-700 transform translate-y-0 opacity-100 ${testimonial.delay} flex flex-col h-full`}
+            className={`bg-white/10 text-white backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-white/20 transition-all duration-700 transform translate-y-0 opacity-100 ${testimonial.delay} flex flex-col h-full`}
           >
-            <div className="flex items-center mb-3 sm:mb-4">
+            <div className="flex items-center text-white mb-3 sm:mb-4">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
